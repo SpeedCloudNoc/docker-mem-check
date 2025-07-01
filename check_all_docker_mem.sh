@@ -9,10 +9,14 @@
 
 set -euo pipefail
 
-# 让用户手动输入内存阈值（单位：MiB）
-read -p "请输入每个容器的内存阈值（MiB）： " THRESHOLD
+# 获取命令行传入的内存阈值（单位：MiB）
+THRESHOLD="$3"
+if [ -z "$THRESHOLD" ]; then
+    echo "请提供内存阈值！"
+    exit 1
+fi
 
-LOG_DIR="/var/log/docker_mem"
+LOG_DIR="$2"
 mkdir -p "$LOG_DIR"
 AGG_LOG="$LOG_DIR/all.log"
 
