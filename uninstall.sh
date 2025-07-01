@@ -27,4 +27,8 @@ else
     echo "未找到日志目录：$LOG_DIR"
 fi
 
-echo "卸载成功！脚本、定时任务和日志文件已被删除。"
+echo "卸载成功！"
+echo "以下文件已被删除："
+echo "脚本文件：$INSTALL_PATH"
+echo "日志文件目录：$LOG_DIR"
+echo "定时任务已清除。"
