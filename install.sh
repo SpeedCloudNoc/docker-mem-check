@@ -11,7 +11,7 @@ LOG_DIR="${LOG_DIR:-/var/log/docker_mem}"
 read -p "请输入每个容器的内存阈值（MiB）： " THRESHOLD
 
 # 设定 GitHub 仓库地址
-GITHUB_URL="https://raw.githubusercontent.com/SpeedCloudNoc/docker-mem-check/blob/561f9793a67dff05b7318d031226b6509a7c79da/check_all_docker_mem.sh"
+GITHUB_URL="https://raw.githubusercontent.com/SpeedCloudNoc/docker-mem-check/8a2d48aba3c6d6989b7dd05ee8c1668a9f03fc8a/check_all_docker_mem.sh"
 
 # 下载脚本文件到指定路径
 curl -sSL "$GITHUB_URL" -o "$INSTALL_PATH"
